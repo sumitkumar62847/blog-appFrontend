@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Blog from "./Blog";
-import config from "../config";
+
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState();

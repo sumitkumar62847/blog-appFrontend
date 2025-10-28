@@ -1,15 +1,13 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useDispatch } from "react-redux";
-import { authActions } from "../store";
+
 import { useNavigate, useLocation } from "react-router-dom";
-import config from "../config";
+
 
 const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const { isSignupButtonPressed } = location.state || {};
 
@@ -57,7 +55,6 @@ const Login = () => {
       const data = await sendRequest(type);
       localStorage.setItem("userId", data.user._id); // Or console.log for mock
       console.log("User ID stored:", data.user._id);
-      dispatch(authActions.login());
       navigate("/blogs");
     } catch (err) {
       const errorMessage =

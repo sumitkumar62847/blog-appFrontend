@@ -1,8 +1,7 @@
 import { Avatar, Card,CardContent, CardHeader, CardMedia, Typography } from "@mui/material";
-import { useStyles } from "./utils";
 
 const Blog = ({ title, desc, img, user, usercss  }) => {
-  const classes = useStyles();  
+  
 
   return (
     <div>
@@ -22,7 +21,7 @@ const Blog = ({ title, desc, img, user, usercss  }) => {
         <CardHeader
           avatar={
             <Avatar
-              className={classes.font}
+             
               sx={{ bgcolor: "red" }}
               aria-label="recipe"
             >
@@ -37,7 +36,7 @@ const Blog = ({ title, desc, img, user, usercss  }) => {
           <hr />
           <br />
           <Typography
-            className={classes.font}
+            
             variant="body2"
             color="text.secondary"
           >

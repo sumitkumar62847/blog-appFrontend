@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Blog from "./Blog";
 import { makeStyles } from "@mui/styles";
-import config from "../config";
-import { Box } from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
   container: {

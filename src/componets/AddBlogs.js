@@ -1,15 +1,13 @@
 import { Box, Button, InputLabel, TextField, Typography } from "@mui/material";
 import axios from "axios";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
-import config from "../config";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useStyles } from "./utils";
 import placeholderImg from "../../src/placeholder.jpg"
 
 const labelStyles = { mb: 1, mt: 2, fontSize: "24px", fontWeight: "bold" };
 const AddBlogs = () => {
-  const classes = useStyles();
+  
   const navigate = useNavigate();
   const [inputs, setInputs] = useState({  
     title: "",
@@ -64,7 +62,7 @@ const AddBlogs = () => {
           width={"80%"}
         >
           <Typography
-            className={classes.font}
+          
             padding={3}
             color="grey"
             variant="h2"
@@ -72,22 +70,22 @@ const AddBlogs = () => {
           >
             Post Your Blog
           </Typography>
-          <InputLabel className={classes.font} sx={labelStyles}>
+          <InputLabel sx={labelStyles}>
             Title
           </InputLabel>
           <TextField
-            className={classes.font}
+           
             name="title"
             onChange={handleChange}
             value={inputs.title}
             margin="auto"
             variant="outlined"
           />
-          <InputLabel className={classes.font} sx={labelStyles}>
+          <InputLabel sx={labelStyles}>
             Description
           </InputLabel>
           <TextareaAutosize
-            className={classes.font}
+          
             name="description"
             onChange={handleChange}
             minRows={10}
@@ -95,11 +93,11 @@ const AddBlogs = () => {
             variant="outlined"
             value={inputs.description}
           />
-          <InputLabel className={classes.font} sx={labelStyles}>
+          <InputLabel sx={labelStyles}>
             ImageURL
           </InputLabel>
           <TextField
-            className={classes.font}
+           
             name="imageURL"
             onChange={handleChange}
             value={inputs.imageURL}
