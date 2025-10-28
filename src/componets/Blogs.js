@@ -7,7 +7,7 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState();
   const sendRequest = async () => {
     const res = await axios
-      .get(`${config.BASE_URL}/api/blogs`)
+      .get(`${process.env.REACT_APP_API_URL}/api/blogs`)
       .catch((err) => console.log(err));
     const data = await res?.data;
     return data;

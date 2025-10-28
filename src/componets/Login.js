@@ -34,7 +34,7 @@ const Login = () => {
 
   const sendRequest = async (type) => {
       const res = await axios
-      .post(`${config.BASE_URL}/api/users/${type}`, {
+      .post(`${process.env.REACT_APP_API_URL}/api/users/${type}`, {
         name: inputs.name,
         email: inputs.email,
         password: inputs.password,
